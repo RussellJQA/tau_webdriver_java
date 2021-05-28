@@ -14,10 +14,19 @@
     </properties>
 
     <dependencies>
+
         <dependency>
             <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+
+        <dependency>
+            <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
+            <!-- Includes Selenium Select class -->
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
             <version>3.141.59</version>
         </dependency>
 
@@ -28,6 +37,7 @@
             <version>7.4.0</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
 </project>
