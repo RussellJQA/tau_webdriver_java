@@ -3,21 +3,24 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-/*
-This class was copied verbatim from
-https://raw.githubusercontent.com/angiejones/selenium-webdriver-java-course/master/webdriver_java/src/main/java/pages/EmailSentPage.java
-because currently (May 26, 2021) clicking Forgot Password's "Retrieve password" button gives an "Internal Server Error".
+/**
+ * Because of a Known Issue on the Web site, I couldn't examine the expected Web page manually in order to
+ * determine how to implement this class.
+ *
+ * So, for now, I instead just copied it from the course repository at
+ * https://raw.githubusercontent.com/angiejones/selenium-webdriver-java-course/master/webdriver_java/src/main/java/pages/EmailSentPage.java
  */
+
 public class EmailSentPage {
 
     private WebDriver driver;
-    private By contentArea = By.id("content");
+    private By messageArea = By.id("content");
 
     public EmailSentPage(WebDriver driver){
         this.driver = driver;
     }
 
     public String getMessage() {
-        return driver.findElement(contentArea).getText();
+        return driver.findElement(messageArea).getText();
     }
 }

@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class ForgotPasswordPage {
 
@@ -22,4 +23,9 @@ public class ForgotPasswordPage {
         return new EmailSentPage(driver);
     }
 
+    // Needed because of Known Issue on the Website Under Test.
+    // See comments in ForgotPasswordTests.java
+    public String getAlternateText() {
+        return driver.findElement(By.tagName("h1")).getText();
+    }
 }
