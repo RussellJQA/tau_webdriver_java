@@ -19,9 +19,19 @@ public class HomePage {
         return new ForgotPasswordPage(driver);
     }
 
+    public SliderPage clickHorizontalSlider() {
+        clickLink("Horizontal Slider");
+        return new SliderPage(driver);
+    }
+
     public HoversPage clickHovers() {
         clickLink("Hovers");
         return new HoversPage(driver);
+    }
+
+    public KeyPressesPage clickKeyPresses() {
+        clickLink("Key Presses");
+        return new KeyPressesPage(driver);
     }
 
     public LoginPage clickFormAuthentication() {
