@@ -3,6 +3,8 @@ package exercises.chapter4.passwords;
 import base.BaseTests;
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.Test;
+import pages.EmailSentPage;
+import pages.ForgotPasswordPage;
 
 
 import static org.testng.Assert.assertEquals;
@@ -22,14 +24,14 @@ public class ForgotPasswordTests extends BaseTests {
     @Test
     public void testForgotPassword() {
 
-        var forgotPasswordPage = homePage.clickForgotPassword();
+        ForgotPasswordPage forgotPasswordPage = homePage.clickForgotPassword();
 
         // Enter Email address
         forgotPasswordPage.setEmail("tau@example.com");
 
         try {
             // Click the "Retrieve password" button
-            var emailSentPage = forgotPasswordPage.clickRetrievePasswordButton();
+            EmailSentPage emailSentPage = forgotPasswordPage.clickRetrievePasswordButton();
 
             // Assert that results are as expected
             assertEquals(emailSentPage.getMessage(), "Your email's been sent:", "Message is incorrect");
