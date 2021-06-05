@@ -23,5 +23,6 @@
 hs_err_pid*
 
 # Custom
-/myNotes/
+/target/
 chromedriver.exe
+/myNotes/
