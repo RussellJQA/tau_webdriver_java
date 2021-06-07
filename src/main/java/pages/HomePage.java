@@ -56,6 +56,16 @@ public class HomePage {
         return new KeyPressesPage(driver);
     }
 
+    public NestedFramesPage clickNestedFrames() {
+        clickLink("Nested Frames");
+        return new NestedFramesPage(driver);
+    }
+
+    public WysiwygEditorPage clickWysiwygEditor() {
+        clickLink("WYSIWYG Editor");
+        return new WysiwygEditorPage(driver);
+    }
+
     private void clickLink(String linkText) {
         WebElement element = driver.findElement(By.linkText(linkText));
 

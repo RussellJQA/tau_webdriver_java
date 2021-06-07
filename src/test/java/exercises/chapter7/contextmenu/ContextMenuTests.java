@@ -3,7 +3,6 @@ package exercises.chapter7.contextmenu;
 import base.BaseTests;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import pages.AlertsPage;
 import pages.ContextMenuPage;
 
 import static org.testng.Assert.assertEquals;
