@@ -11,11 +11,6 @@ public class HomePage {
 
     public HomePage(WebDriver driver) { this.driver = driver; }
 
-    public ContextMenuPage clickContextMenu() {
-        clickLink("Context Menu");
-        return new ContextMenuPage(driver);
-    }
-
     public DropDownPage clickDropDown() {
         clickLink("Dropdown");
         return new DropDownPage(driver);
@@ -31,22 +26,12 @@ public class HomePage {
         return new FileUploadPage(driver);
     }
 
-    public ForgotPasswordPage clickForgotPassword() {
-        clickLink("Forgot Password");
-        return new ForgotPasswordPage(driver);
-    }
-
     public LoginPage clickFormAuthentication() {
         clickLink("Form Authentication");
         return new LoginPage(driver);
     }
 
-    public SliderPage clickHorizontalSlider() {
-        clickLink("Horizontal Slider");
-        return new SliderPage(driver);
-    }
-
-    public HoversPage clickHovers() {
+   public HoversPage clickHovers() {
         clickLink("Hovers");
         return new HoversPage(driver);
     }
@@ -71,9 +56,9 @@ public class HomePage {
         return new LargeAndDeepDomPage(driver);
     }
 
-    public NestedFramesPage clickNestedFrames() {
-        clickLink("Nested Frames");
-        return new NestedFramesPage(driver);
+    public MultipleWindowsPage clickMultipleWindows() {
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
     }
 
     public WysiwygEditorPage clickWysiwygEditor() {
@@ -91,5 +76,29 @@ public class HomePage {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
         element.click();
+    }
+
+    /**
+     * Methods for individual exercises
+     */
+
+    public ContextMenuPage clickContextMenu() {
+        clickLink("Context Menu");
+        return new ContextMenuPage(driver);
+    }
+
+    public ForgotPasswordPage clickForgotPassword() {
+        clickLink("Forgot Password");
+        return new ForgotPasswordPage(driver);
+    }
+
+    public NestedFramesPage clickNestedFrames() {
+        clickLink("Nested Frames");
+        return new NestedFramesPage(driver);
+    }
+
+    public SliderPage clickHorizontalSlider() {
+        clickLink("Horizontal Slider");
+        return new SliderPage(driver);
     }
 }
