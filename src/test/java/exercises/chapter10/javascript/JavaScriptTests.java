@@ -1,7 +1,6 @@
 package exercises.chapter10.javascript;
 
 import base.BaseTests;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import pages.DropDownPage;
 
@@ -11,8 +10,6 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class JavaScriptTests extends BaseTests {
-
-    private WebDriver driver;
 
     @Test
     public void testMultipleOptions() {

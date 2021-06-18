@@ -1,15 +1,12 @@
 package exercises.chapter7.contextmenu;
 
 import base.BaseTests;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import pages.ContextMenuPage;
 
 import static org.testng.Assert.assertEquals;
 
 public class ContextMenuTests extends BaseTests {
-
-    private WebDriver driver;
 
     @Test
     public void testContextMenu () {
