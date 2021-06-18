@@ -7,10 +7,10 @@ import org.openqa.selenium.WebElement;
 public class NestedFramesPage {
 
     private WebDriver driver;
-    private final String topFrame = "frame-top";  // For finding a frame with a name="frame-top"
-    private final String bottomFrame = "frame-bottom";
-    private final String leftFrame = "frame-left";
-    private final By body = By.tagName("body");
+    private static final String topFrame = "frame-top";  // For finding a frame with a name="frame-top"
+    private static final String bottomFrame = "frame-bottom";
+    private static final String leftFrame = "frame-left";
+    private static final By body = By.tagName("body");
 
     public NestedFramesPage(WebDriver driver) {
         this.driver = driver;

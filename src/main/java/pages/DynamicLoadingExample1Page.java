@@ -13,9 +13,9 @@ public class DynamicLoadingExample1Page {
 
     private WebDriver driver;
 
-    private final static By startButton = By.cssSelector("#start button");
-    private final static By loadingIndicator = By.id("loading");
-    private final static By loadedText = By.id("finish");
+    private static final By startButton = By.cssSelector("#start button");
+    private static final By loadingIndicator = By.id("loading");
+    private static final By loadedText = By.id("finish");
 
     public DynamicLoadingExample1Page(WebDriver driver) {
         this.driver = driver;

@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 public class ForgotPasswordPage {
 
     private WebDriver driver;
-    private final By emailField = By.id("email");
-    private final By retrievePasswordButton = By.id("form_submit");
+    private static final By emailField = By.id("email");
+    private static final By retrievePasswordButton = By.id("form_submit");
 
     public ForgotPasswordPage(WebDriver driver) {
         this.driver = driver;

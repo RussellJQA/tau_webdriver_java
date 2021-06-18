@@ -9,7 +9,7 @@ public class ContextMenuPage {
 
     private WebDriver driver;
 
-    private final By hotSpot = By.id("hot-spot");
+    private static final By hotSpot = By.id("hot-spot");
 
     public ContextMenuPage(WebDriver driver) { this.driver = driver; }
 

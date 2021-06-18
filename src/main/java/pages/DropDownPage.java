@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class DropDownPage {
 
     private WebDriver driver;
-    private final static By dropdown = By.id("dropdown");
+    private static final By dropdown = By.id("dropdown");
 
     public DropDownPage(WebDriver driver) {
         this.driver = driver;

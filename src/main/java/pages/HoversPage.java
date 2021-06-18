@@ -9,8 +9,8 @@ public class HoversPage {
 
     private WebDriver driver;
 
-    private final By figureBox = By.className("figure");
-    private final By boxCaption = By.className("figcaption");
+    private static final By figureBox = By.className("figure");
+    private static final By boxCaption = By.className("figcaption");
 
     public HoversPage(WebDriver driver) {
         this.driver = driver;

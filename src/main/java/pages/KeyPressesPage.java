@@ -10,8 +10,8 @@ public class KeyPressesPage {
 
     private WebDriver driver;
 
-    private final By inputField = By.id("target");
-    private final By resulttext = By.id("result");
+    private static final By inputField = By.id("target");
+    private static final By resulttext = By.id("result");
 
     public KeyPressesPage(WebDriver driver) { this.driver = driver; }
 
