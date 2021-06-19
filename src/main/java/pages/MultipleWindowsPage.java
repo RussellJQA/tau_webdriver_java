@@ -5,10 +5,14 @@ import org.openqa.selenium.WebDriver;
 
 public class MultipleWindowsPage {
 
-    private WebDriver driver;
     private static final By clickHereLink = By.linkText("Click Here");
+    private final WebDriver driver;
 
-    public MultipleWindowsPage(WebDriver driver) { this.driver = driver; }
+    public MultipleWindowsPage(WebDriver driver) {
+        this.driver = driver;
+    }
 
-    public void clickHere() { driver.findElement(clickHereLink).click(); }
+    public void clickHere() {
+        driver.findElement(clickHereLink).click();
+    }
 }

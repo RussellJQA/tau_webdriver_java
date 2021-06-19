@@ -1,21 +1,22 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 public class KeyPressesPage {
 
-    private WebDriver driver;
-
     private static final By inputField = By.id("target");
     private static final By resulttext = By.id("result");
+    private final WebDriver driver;
 
-    public KeyPressesPage(WebDriver driver) { this.driver = driver; }
+    public KeyPressesPage(WebDriver driver) {
+        this.driver = driver;
+    }
 
-    public void enterText(String text) { driver.findElement(inputField).sendKeys(text); }
+    public void enterText(String text) {
+        driver.findElement(inputField).sendKeys(text);
+    }
 
     public void enterPi() {
         /* The course video said to use this, and showed it working on a Mac. But it doesn't currently work in Chrome on Windows. */
@@ -45,8 +46,12 @@ public class KeyPressesPage {
         input.sendKeys("=3.14");
     }
 
-    public String getResponse() { return driver.findElement(resulttext).getText(); }
+    public String getResponse() {
+        return driver.findElement(resulttext).getText();
+    }
 
     /* I added this, to assert against in testPi(). [No assert was used in the class example.] */
-    public String getEnteredText() { return driver.findElement(inputField).getAttribute("value"); }
+    public String getEnteredText() {
+        return driver.findElement(inputField).getAttribute("value");
+    }
 }

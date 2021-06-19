@@ -5,11 +5,10 @@ import org.openqa.selenium.WebDriver;
 
 public class WysiwygEditorPage {
 
-    private WebDriver driver;
-
-    private static String editorIframeId = "mce_0_ifr";  // For finding an iframe with id="mce_0_ifr"
     private static final By textArea = By.id("tinymce");
     private static final By increaseIndent = By.cssSelector("button[title='Increase indent']");
+    private static final String editorIframeId = "mce_0_ifr";  // For finding an iframe with id="mce_0_ifr"
+    private final WebDriver driver;
 
     public WysiwygEditorPage(WebDriver driver) {
         this.driver = driver;

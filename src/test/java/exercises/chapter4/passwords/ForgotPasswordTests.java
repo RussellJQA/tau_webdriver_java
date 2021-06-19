@@ -6,16 +6,15 @@ import org.testng.annotations.Test;
 import pages.EmailSentPage;
 import pages.ForgotPasswordPage;
 
-
 import static org.testng.Assert.assertEquals;
 
 /**
  * NOTE: The 'try' block below seeks to implement the original exercise.
  * But it's currently blocked by a Known Issue [See comments below.] on
  * the [Forgot Password](https://the-internet.herokuapp.com/forgot_password) page.
- *
+ * <p>
  * In the course Slack channel, the course instructor [Angie Jones] suggested an alternative:
- *      "For the purpose of the lesson, you can just verify something else on that page -- like the error message lol"
+ * "For the purpose of the lesson, you can just verify something else on that page -- like the error message lol"
  * So, I've implemented that in the 'catch' block.
  */
 

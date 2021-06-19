@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class FramesPage {
 
-    private WebDriver driver;
+    private final WebDriver driver;
 
     public FramesPage(WebDriver driver) {
         this.driver = driver;

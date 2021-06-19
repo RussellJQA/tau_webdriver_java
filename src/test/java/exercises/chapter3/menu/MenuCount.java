@@ -11,6 +11,11 @@ public class MenuCount {
 
     private WebDriver driver;
 
+    public static void main(String[] args) {
+        MenuCount menuCount = new MenuCount();
+        menuCount.printMenuCount();
+    }
+
     public void printMenuCount() {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
@@ -22,10 +27,5 @@ public class MenuCount {
         System.out.printf("%nNumber of 'Example 1' menu elements: %s%n", menuElements.size());
 
         driver.quit();  // close the browser and end the session [close() will only close the browser)
-    }
-
-    public static void main(String[] args) {
-        MenuCount menuCount = new MenuCount();
-        menuCount.printMenuCount();
     }
 }

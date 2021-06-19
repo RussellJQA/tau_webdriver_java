@@ -1,21 +1,16 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
 public class DynamicLoadingExample1Page {
-
-    private WebDriver driver;
 
     private static final By startButton = By.cssSelector("#start button");
     private static final By loadingIndicator = By.id("loading");
     private static final By loadedText = By.id("finish");
+    private final WebDriver driver;
 
     public DynamicLoadingExample1Page(WebDriver driver) {
         this.driver = driver;
@@ -38,4 +33,4 @@ public class DynamicLoadingExample1Page {
     public String getLoadedText() {
         return driver.findElement(loadedText).getText();
     }
- }
+}

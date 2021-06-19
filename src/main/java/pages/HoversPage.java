@@ -7,17 +7,15 @@ import org.openqa.selenium.interactions.Actions;
 
 public class HoversPage {
 
-    private WebDriver driver;
-
     private static final By figureBox = By.className("figure");
     private static final By boxCaption = By.className("figcaption");
+    private final WebDriver driver;
 
     public HoversPage(WebDriver driver) {
         this.driver = driver;
     }
 
     /**
-     *
      * @param index starts at 1
      */
     public FigureCaption hoverOverFigure(int index) {
@@ -29,12 +27,11 @@ public class HoversPage {
         return new FigureCaption(figure.findElement(boxCaption));
     }
 
-    public class FigureCaption {
-
-        private WebElement caption;
+    public static class FigureCaption {
 
         private final By header = By.tagName("h5");
         private final By link = By.tagName("a");
+        private final WebElement caption;
 
         public FigureCaption(WebElement caption) {
             this.caption = caption;

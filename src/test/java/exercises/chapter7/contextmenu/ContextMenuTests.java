@@ -9,7 +9,7 @@ import static org.testng.Assert.assertEquals;
 public class ContextMenuTests extends BaseTests {
 
     @Test
-    public void testContextMenu () {
+    public void testContextMenu() {
         ContextMenuPage contextMenuPage = homePage.clickContextMenu();
         contextMenuPage.rightClickHotSpot();
         String text = contextMenuPage.alert_GetText();

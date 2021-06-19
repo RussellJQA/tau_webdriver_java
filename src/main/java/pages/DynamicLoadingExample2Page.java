@@ -8,14 +8,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DynamicLoadingExample2Page {
 
-    private WebDriver driver;
-
     private static final By startButtonLocator = By.cssSelector("#start button");
     private static final By loadedText = By.id("finish");
+    private final WebDriver driver;
 
-    public DynamicLoadingExample2Page(WebDriver driver) { this.driver = driver; }
+    public DynamicLoadingExample2Page(WebDriver driver) {
+        this.driver = driver;
+    }
 
-    public void clickStart() { driver.findElement(startButtonLocator).click(); }
+    public void clickStart() {
+        driver.findElement(startButtonLocator).click();
+    }
 
     public void waitForText(String text) {
         WebDriverWait wait = new WebDriverWait(driver, 5);

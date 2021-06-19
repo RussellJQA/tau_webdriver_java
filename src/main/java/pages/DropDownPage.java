@@ -11,8 +11,8 @@ import java.util.stream.Collectors;
 
 public class DropDownPage {
 
-    private WebDriver driver;
     private static final By dropdown = By.id("dropdown");
+    private final WebDriver driver;
 
     public DropDownPage(WebDriver driver) {
         this.driver = driver;
@@ -38,6 +38,6 @@ public class DropDownPage {
     public void setMultipleOptions() {
         WebElement dropdownElement = driver.findElement(dropdown);
         String script = "arguments[0].setAttribute('multiple', '');";
-        ((JavascriptExecutor)driver).executeScript(script, dropdownElement);
+        ((JavascriptExecutor) driver).executeScript(script, dropdownElement);
     }
 }

@@ -5,14 +5,13 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class DynamicLoadingPage{
+public class DynamicLoadingPage {
 
-    private WebDriver driver;
-
-    private String linkXpath_Format = "//a[contains(text(), '%s')]";
-    private final By link_example1 = By.xpath((String.format(linkXpath_Format, "Example 1")));
-    private final By link_example2= By.xpath((String.format(linkXpath_Format, "Example 2")));
     private static final By startButton = By.id("start");
+    private final WebDriver driver;
+    private final String linkXpath_Format = "//a[contains(text(), '%s')]";
+    private final By link_example1 = By.xpath((String.format(linkXpath_Format, "Example 1")));
+    private final By link_example2 = By.xpath((String.format(linkXpath_Format, "Example 2")));
 
     public DynamicLoadingPage(WebDriver driver) {
         this.driver = driver;
