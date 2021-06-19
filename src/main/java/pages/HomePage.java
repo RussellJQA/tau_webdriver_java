@@ -7,9 +7,11 @@ import org.openqa.selenium.WebElement;
 
 public class HomePage {
 
-    private WebDriver driver;
+    private final WebDriver driver;
 
-    public HomePage(WebDriver driver) { this.driver = driver; }
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
+    }
 
     public DropDownPage clickDropDown() {
         clickLink("Dropdown");
@@ -31,7 +33,7 @@ public class HomePage {
         return new LoginPage(driver);
     }
 
-   public HoversPage clickHovers() {
+    public HoversPage clickHovers() {
         clickLink("Hovers");
         return new HoversPage(driver);
     }
