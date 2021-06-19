@@ -2,22 +2,23 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class NestedFramesPage {
 
     private WebDriver driver;
+
     private static final String topFrame = "frame-top";  // For finding a frame with a name="frame-top"
     private static final String bottomFrame = "frame-bottom";
     private static final String leftFrame = "frame-left";
+
     private static final By body = By.tagName("body");
+
+    private String getFrameText() {
+        return driver.findElement(body).getText();
+    }
 
     public NestedFramesPage(WebDriver driver) {
         this.driver = driver;
-    }
-
-    private String getFrameText() {
-         return driver.findElement(body).getText();
     }
 
     public String getTextFromLeftFrame() {

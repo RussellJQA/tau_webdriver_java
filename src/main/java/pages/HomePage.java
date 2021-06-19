@@ -92,9 +92,9 @@ public class HomePage {
         return new ForgotPasswordPage(driver);
     }
 
-    public NestedFramesPage clickNestedFrames() {
-        clickLink("Nested Frames");
-        return new NestedFramesPage(driver);
+    public FramesPage clickFrames() {
+        clickLink("Frames");
+        return new FramesPage(driver);
     }
 
     public SliderPage clickHorizontalSlider() {
